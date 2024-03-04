@@ -1,0 +1,221 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Universidade Federal de Santa Catarina             
+% Biblioteca Universit�ria                     
+%----------------------------------------------------------------------
+% Exemplo de utiliza��o da documentclass ufscThesis
+%----------------------------------------------------------------------                                                           
+% (c)2013 Roberto Simoni (roberto.emc@gmail.com)
+%         Carlos R Rocha (cticarlo@gmail.com)
+%         Rafael M Casali (rafaelmcasali@yahoo.com.br)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{ufscThesis} % Definicao do documentclass ufscThesis	
+
+%----------------------------------------------------------------------
+% Pacotes usados especificamente neste documento
+\usepackage{graphicx} % Possibilita o uso de figuras e gr�ficos
+\usepackage{color}    % Possibilita o uso de cores no documento
+\usepackage{listings}
+%----------------------------------------------------------------------
+% Comandos criados pelo usu�rio
+\newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
+
+%----------------------------------------------------------------------
+% Identificadores do trabalho
+% Usados para preencher os elementos pr�-textuais
+\instituicao[a]{Universidade Federal de Santa Catarina} % Opcional
+\departamento[a]{Biblioteca Universit�ria}
+\curso[o]{Programa de ...}
+\documento[a]{Tese} % [o] para disserta��o [a] para tese
+\titulo{T�tulo}
+\subtitulo{Subt�tulo (se houver)} % Opcional
+\autor{Nome completo do autor}
+\grau{...}
+\local{Florian�polis} % Opcional (Florian�polis � o padr�o)
+\data{04}{junho}{2013}
+\orientador[Orientador\\Universidade ...]{Prof. Dr.}
+\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
+\coordenador[Coordenador\\Universidade ...]{Prof. Dr. }
+
+\numerodemembrosnabanca{4} % Isso decide se haver� uma folha adicional
+\orientadornabanca{nao} % Se faz parte da banca definir como sim
+\coorientadornabanca{sim} % Se faz parte da banca definir como sim
+\bancaMembroA{Primeiro membro\\Universidade ...} %Nome do presidente da banca
+\bancaMembroB{Segundo membro\\Universidade ...}      % Nome do membro da Banca
+\bancaMembroC{Terceiro membro\\Universidade ...}     % Nome do membro da Banca
+\bancaMembroD{Quarto membro\\Universidade ...}       % Nome do membro da Banca
+%\bancaMembroE{Quinto membro\\Universidade ...}       % Nome do membro da Banca
+%\bancaMembroF{Sexto membro\\Universidade ...}        % Nome do membro da Banca
+%\bancaMembroG{S�timo membro\\Universidade ...}       % Nome do membro da Banca
+
+\dedicatoria{Este trabalho � dedicado aos meus colegas de classe e aos meus queridos pais.}
+
+\agradecimento{Inserir os agradecimentos aos colaboradores � execu��o do trabalho.}
+
+\epigrafe{Texto da Ep�grafe. Cita��o relativa ao tema do trabalho. � opcional. A ep�grafe pode tamb�m aparecer na abertura de cada se��o ou cap�tulo.}
+{(Autor da ep�grafe, ano)}
+
+\textoResumo {O texto do resumo deve ser digitado, em um �nico bloco, sem espa�o de par�grafo. O resumo deve ser significativo, composto de uma sequ�ncia de frases concisas, afirmativas e n�o de uma enumera��o de t�picos. N�o deve conter cita��es. Deve usar o verbo na voz passiva. Abaixo do resumo, deve-se informar as palavras-chave (palavras ou express�es significativas retiradas do texto) ou, termos retirados de thesaurus da �rea.}
+\palavrasChave {Palavra-chave 1. Palavra-chave 2.  Palavra-chave 3. }
+ 
+\textAbstract {Resumo traduzido para outros idiomas, neste caso, ingl�s. Segue o formato do resumo feito na l�ngua vern�cula. As palavras-chave traduzidas, vers�o em l�ngua estrangeira, s�o colocadas abaixo do texto precedidas pela express�o ``Keywords'', separadas por ponto.}
+\keywords {Keyword 1. Keyword 2. Keyword 3.}
+
+%----------------------------------------------------------------------
+% In�cio do documento                                
+\begin{document}
+%--------------------------------------------------------
+% Elementos pr�-textuais
+%\capa  
+\folhaderosto[comficha] % Se nao quiser imprimir a ficha, � s� n�o usar o par�metro
+\folhaaprovacao
+\paginadedicatoria
+\paginaagradecimento
+\paginaepigrafe
+\paginaresumo
+\paginaabstract
+%\pretextuais % Substitui todos os elementos pre-textuais acima
+\listadefiguras % as listas dependem da necessidade do usu�rio
+\listadetabelas 
+\listadeabreviaturas
+\listadesimbolos
+\sumario
+%--------------------------------------------------------
+% Elementos textuais
+
+\chapter{Introdu��o}
+As orienta��es aqui apresentadas s�o baseadas em um conjunto de normas elaboradas pela ABNT. Al�m das normas t�cnicas a Biblioteca tamb�m elaborou  uma s�rie de tutoriais e guias que est�o dispon�veis na sua Homepage. \url{http://portalbu.ufsc.br/normalizacao-de-trabalhos-2/}. 
+
+
+\section{OBJETIVOS}
+
+Descri��o...
+
+\subsection{Objetivo Geral}
+
+Descri��o...
+
+\subsection{Objetivos Espec�ficos}
+
+Descri��o...
+
+\chapter{DESENVOLVIMENTO}
+
+\section{EXPOSI��O DO TEMA OU MAT�RIA}
+
+� a parte principal e mais extensa do trabalho. Deve apresentar a fundamenta��o te�rica, a metodologia, os resultados e a discuss�o. Divide-se em se��es e subse��es conforme a NBR 6024~\cite{abnt14724}. Quanto a sua estrutura, segue as recomenda��es da norma para prepara��o de trabalhos acad�micos, a NBR 14724 de 2011~\cite{abnt14724}. Quanto � Formata��o, segue o modelo adotado pela UFSC, o formato A5.
+
+
+\subsection{Formata��o do texto}
+
+No que diz respeito � estrutura do trabalho, o novo modelo para disserta��es e teses adotado pela UFSC segue a NBR 14724 (2011). Por�m, em rela��o � formata��o, a UFSC adotou o tamanho A5, que corresponde � metade do A4. Por esta raz�o, foi necess�rio uma adequa��o no tamanho da fonte, espa�amento entrelinhas, margens, etc, conforme exposto no quadro abaixo.
+
+O texto deve ser justificado, digitado em cor preta, podendo utilizar outras cores somente para as ilustra��es. Utilizar papel branco. Os elementos pr�-textuais devem iniciar no anverso da folha, com  exce��o da ficha catalogr�fica. Os elementos textuais e p�s-textuais devem ser digitados no anverso e verso das folhas, com espa�amento simples (1). 
+
+
+
+\subsubsection{As ilustra��es}
+
+Independente do tipo de ilustra��o (quadro, desenho, figura, fotografia, mapa, entre outros) sua identifica��o aparece na parte superior, precedida da palavra designativa. 
+
+
+
+A indica��o da fonte consultada deve aparecer na parte inferior, elemento obrigat�rio mesmo que seja produ��o do pr�prio autor. A ilustra��o deve ser citada no texto e inserida o mais pr�ximo poss�vel do texto a que se refere~\cite{abnt14724}. 
+
+A Figura \ref{fig:a} mostra o logo da BU
+\begin{figure}[!htb]
+   \centering
+   \caption{Logo da BU.}
+   \includegraphics[width=0.3\textwidth]{figuras/brasaoBU.jpg}
+     \label{fig:a}
+\end{figure}
+
+A Tabela~\ref{tab:a} mostra mais informa��es do template BU.
+
+\begin{table}[!htb]
+\begin{center}
+ \caption{Formata��o do texto.}
+  \begin{tabular}{ p{3cm} | p{6cm} }
+    \hline
+Cor & Branco\\ \hline
+Formato do papel & A5\\ \hline
+Gramatura & 75\\ \hline
+Impress�o & Frente e verso\\ \hline
+Margens & Espelhadas: superior 2, Inferior: 1,5, Externa 1,5 e Externa: 2.\\ \hline
+Cabe�alho & 0,7\\ \hline
+Rodap� & 0,7\\ \hline
+Pagina��o & Externa\\ \hline
+Alinhamento vertical & Superior\\ \hline
+Alinhamento do texto & Justificado\\ \hline
+Fonte sugerida & Times New Roman \\ \hline
+Tamanho da fonte & 10,5 para o texto incluindo os t�tulos das se��es e subse��es. As cita��es com mais de tr�s linhas as legendas das ilustra��es e tabelas, fonte 9,5.\\ \hline
+Espa�amento entre linhas & Um (1) simples\\ \hline
+Espa�amento entre par�grafos & Anterior 0,0; Posterior 0,0\\ \hline
+Numera��o da se��o & As se��es  prim�rias devem  come�ar  sempre em p�ginas �mpares. Deixar um espa�o (simples) entre o t�tulo da se��o e o texto e  entre o texto e o t�tulo da subse��o. \\  \hline
+  \end{tabular}
+\end{center}
+Fonte: Universidade Federal de Santa Catarina (2011)
+\label{tab:a}
+\end{table}
+
+
+
+\subsubsection{Equa��es e f�rmulas}
+
+As equa��es e f�rmulas devem ser destacadas no texto para facilitar a leitura.  Para numer�-las, deve-se usar algarismos ar�bicos entre par�nteses e alinhados � direita. Pode-se usar uma entrelinha maior do que a usada no texto~\cite{abnt14724}.
+
+Exemplo: A equa��o \ref{eq:a}
+\begin{equation}
+ x^2 + y^2 = z^2
+ \label{eq:a}
+\end{equation}
+ e a equa��o  \ref{eq:b}
+\begin{equation}
+ x^2 + y^2 = n
+\label{eq:b}
+\end{equation}
+
+\subsection{Exemplo de como gerar a lista de s�mbolos e abreviaturas}
+
+Para gerar a lista de s�mbolos e abreviaturas use os comandos
+
+\abreviatura{ABNT}{Associa��o Brasileira de Normas T�cnicas}
+\abreviatura{IBGE}{Instituto Brasileiro de Geografia e Estat�stica}
+\simbolo{$\int$}{Integral}
+\simbolo{$\prod$}{Produt�rio}
+
+\begin{lstlisting}
+\simbolo{s�mbolo}{descri��o}
+\end{lstlisting}
+
+\begin{lstlisting}
+\abreviatura{abreviatura}{descri��o}
+\end{lstlisting}
+
+\subsubsection{Exemplo de cita��es no \LaTeX}
+
+Segundo \citeonline{alves_2001} ...
+
+...no final da frase \cite{abnt14724,BU_formatoA5}
+
+
+\nocite{alves_2001,abnt10520,abnt6024,abnt14724}
+
+
+
+\chapter{CONCLUS�O}
+
+As conclus�es devem responder �s quest�es da pesquisa, em rela��o aos objetivos e hip�teses. Devem ser breves podendo apresentar recomenda��es e sugest�es para trabalhos futuros.
+
+\bibliographystyle{ufscThesis/ufsc-alf}
+\bibliography{bibliografia}
+
+%--------------------------------------------------------
+% Elementos p�s-textuais
+\apendice
+\chapter{Exemplificando um Ap�ndice}
+Texto do Ap�ndice aqui. 
+
+\anexo
+\chapter{Exemplificando um Anexo}
+Texto do anexo aqui.
+\end{document}
